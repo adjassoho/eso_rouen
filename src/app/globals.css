@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Design System Colors */
+  --background: #F9F5F0;
+  /* Cream */
+  --foreground: #2D2420;
+  /* Dark Brown */
+
+  --color-primary: #C07A5F;
+  /* Terracotta */
+  --color-primary-fg: #FFFFFF;
+
+  --color-secondary: #C5A572;
+  /* Gold/Muted Yellow */
+  --color-secondary-fg: #2D2420;
+
+  --color-accent: #F5E6D3;
+  /* Lighter Beige */
+  --color-accent-fg: #2D2420;
+
+  --color-muted: #8C8C8C;
+  --color-muted-fg: #F9F5F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-fg);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-fg);
+
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-fg);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-fg);
+
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-lato), sans-serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+
+  /* Premium Easing */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Bouncy */
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Elegant */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Utilities if needed */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .stagger-1 {
+    transition-delay: 100ms;
+  }
+
+  .stagger-2 {
+    transition-delay: 200ms;
+  }
+
+  .stagger-3 {
+    transition-delay: 300ms;
+  }
+
+  .stagger-4 {
+    transition-delay: 400ms;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
