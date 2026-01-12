@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build outputs
+.next
+out
+
+# Environment variables (local only)
+.env*.local
+
+# Testing
+coverage
+
+# Misc
+.DS_Store
+*.log

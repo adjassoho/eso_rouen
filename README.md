@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eso Rouen - Site Web Ésotérique
 
-## Getting Started
+Site web moderne pour praticienne ésotérique à Rouen, construit avec Next.js 16 et Tailwind CSS v4.
 
-First, run the development server:
+## 🌟 Fonctionnalités
+
+- ✨ 4 pages principales : Accueil, À Propos, Services, Boutique
+- 🎨 Design mystique avec palette terracotta/or/crème
+- 🎭 Animations premium avec ScrollReveal
+- 🌊 Smooth scrolling (Lenis)
+- 📱 Design responsive
+- ⚡ Optimisé pour les performances
+
+## 🚀 Déploiement sur Vercel
+
+### Option 1 : Déploiement via Interface Web (Recommandé)
+
+1. **Connectez-vous à Vercel** : [vercel.com](https://vercel.com)
+2. **Importez le projet** : Cliquez sur "New Project"
+3. **Sélectionnez le repository** : `adjassoho/eso_rouen`
+4. **Configurez le projet** :
+   - Framework Preset: **Next.js** (détecté automatiquement)
+   - Root Directory: `./` (racine du projet)
+   - Build Command: `npm run build` (par défaut)
+   - Output Directory: `.next` (par défaut)
+5. **Déployez** : Cliquez sur "Deploy"
+
+### Option 2 : Déploiement via CLI
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Installer Vercel CLI
+npm i -g vercel
+
+# Se connecter
+vercel login
+
+# Déployer
+vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Développement Local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Installer les dépendances
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Lancer le serveur de développement
+npm run dev
 
-## Learn More
+# Construire pour la production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Démarrer le serveur de production localement
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Structure du Projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+web/
+├── src/
+│   ├── app/              # Pages Next.js (App Router)
+│   │   ├── page.tsx      # Page d'accueil
+│   │   ├── about/        # Page À Propos
+│   │   ├── services/     # Page Services
+│   │   └── shop/         # Page Boutique
+│   └── components/       # Composants réutilisables
+├── public/               # Assets statiques (images)
+└── package.json
+```
 
-## Deploy on Vercel
+## 🎨 Technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework**: Next.js 16.1.1
+- **Styling**: Tailwind CSS v4
+- **Fonts**: Playfair Display (serif) + Lato (sans-serif)
+- **Icons**: Lucide React
+- **Animations**: Custom ScrollReveal + Lenis
+- **Deployment**: Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Variables d'Environnement
+
+Aucune variable d'environnement requise pour le moment.
+
+## 🔧 Configuration Vercel
+
+Le projet est configuré pour fonctionner automatiquement sur Vercel :
+- Détection automatique de Next.js
+- Configuration optimale par défaut
+- Déploiement automatique à chaque push sur `main`
+
+## 📞 Contact
+
+Pour toute question concernant le projet, contactez l'équipe de développement.
+
+---
+
+**Fait avec ❤️ pour Eso Rouen**
